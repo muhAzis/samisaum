@@ -156,7 +156,7 @@ export const cities: object[] = [
       'Cimahi',
       'Cirebon',
       'Depok',
-      'Sukabumi',
+      'Kota Sukabumi',
       'Tasikmalaya',
     ],
   },

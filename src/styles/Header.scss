@@ -1,0 +1,44 @@
+.salam {
+  color: var(--clr-text-special);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: var(--text-shadow);
+}
+
+.location {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  margin-top: 10px;
+  color: var(--clr-text-light);
+  text-shadow: var(--text-shadow);
+  align-items: center;
+  justify-content: center;
+
+  .city {
+    max-width: 80%;
+    font-size: 2rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.dates {
+  position: relative;
+  margin-top: 5px;
+  color: var(--clr-text-special);
+  font-size: 1rem;
+  text-shadow: var(--text-shadow);
+
+  .date-btn {
+    cursor: pointer;
+  }
+
+  .date-picker {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+  }
+}

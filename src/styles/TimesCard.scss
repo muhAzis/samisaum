@@ -1,0 +1,194 @@
+@keyframes blipping {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+#mainCard {
+  width: 100%;
+  margin-top: 20px;
+
+  .card-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 20px 60px;
+    gap: 5px;
+    color: var(--clr-text-light);
+    text-shadow: var(--text-shadow);
+    background-color: var(--clr-background-trans);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    overflow: hidden;
+
+    .hijriyah-date-loading {
+      width: 150px;
+      height: 24px;
+      background-color: var(--clr-text-light);
+      border-radius: 10px;
+      animation: blipping 1s infinite;
+    }
+
+    .time {
+      font-size: 2.5rem;
+    }
+
+    .time-icon {
+      width: 150px;
+      margin-top: 10px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    .time-clock {
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+
+    .time-clock-loading {
+      width: 230px;
+      height: 30px;
+      margin-top: 20px;
+      background-color: var(--clr-text-light);
+      border-radius: 10px;
+      animation: blipping 1s infinite;
+    }
+
+    .text {
+      margin-top: 20px;
+      line-height: 95%;
+    }
+
+    .time-left {
+      font-size: 1.5rem;
+    }
+
+    .time-left-loading {
+      width: 130px;
+      height: 36px;
+      background-color: var(--clr-text-light);
+      border-radius: 10px;
+      animation: blipping 1s infinite;
+    }
+
+    .cta {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      color: var(--clr-purple);
+      text-shadow: none;
+      transform: translate(0, -50%);
+      justify-content: space-between;
+
+      .left-btn,
+      .right-btn {
+        display: grid;
+        width: 40px;
+        height: 80px;
+        line-height: 0;
+        font-size: 1.5rem;
+        background-color: var(--clr-white);
+        box-shadow: var(--box-shadow);
+        place-content: center;
+        transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: var(--box-shadow2);
+          transform: translateY(-6px);
+        }
+
+        &:active {
+          transform: translateY(0px);
+        }
+      }
+
+      .left-btn {
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+      }
+
+      .right-btn {
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+      }
+    }
+
+    .clouds {
+      position: absolute;
+      width: 100%;
+      height: 140px;
+      bottom: -40px;
+      left: 0;
+      background-image: url('/Clouds.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+#mainCard.nonactive {
+  width: 100%;
+  margin-top: 20px;
+
+  .card-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 20px;
+    gap: 5px;
+    color: var(--clr-text-light);
+    text-shadow: var(--text-shadow);
+    background-color: var(--clr-background-trans);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+
+    .time {
+      order: 2;
+      font-size: 2rem;
+    }
+
+    .time-icon {
+      order: 1;
+      width: 70px;
+      margin-top: 0px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    .time-clock {
+      order: 3;
+      margin-top: 0px;
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      background-color: var(--clr-background-trans2);
+      box-shadow: var(--box-shadow2);
+      transform: translateY(-6px);
+    }
+  }
+}

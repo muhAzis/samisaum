@@ -27,25 +27,25 @@ export default function Home() {
                 <TimesCard time={'Ashar'} icon={'/Asr.svg'} iconAlt={'Ashar'} isActive={activeCard === 'ashar'} setActive={() => setActiveCard('ashar')} />
                 <TimesCard time={'Maghrib'} icon={'/Maghrib.svg'} iconAlt={'Maghrib'} isActive={activeCard === 'maghrib'} setActive={() => setActiveCard('maghrib')} />
                 <TimesCard time={'Isya'} icon={'/Isya.svg'} iconAlt={'Isya'} isActive={activeCard === 'isya'} setActive={() => setActiveCard('isya')} />
-              </div>
 
-              <div className="topo-line-container1">
-                <div className="topo-line">
+                {/* <div className="topo-line-container1">
                   <div className="topo-line">
                     <div className="topo-line">
-                      <div className="topo-line" />
+                      <div className="topo-line">
+                        <div className="topo-line" />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="topo-line-container2">
-                <div className="topo-line">
+                <div className="topo-line-container2">
                   <div className="topo-line">
                     <div className="topo-line">
-                      <div className="topo-line" />
+                      <div className="topo-line">
+                        <div className="topo-line" />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </main>
           </DateDataContextProvider>

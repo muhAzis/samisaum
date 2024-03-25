@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '@/styles/TimesCard.scss';
 import { useDate } from '@/hooks/useDate';
 import { useDateData } from '@/hooks/useDateData';
@@ -64,8 +64,6 @@ const TimesCard: React.FC<Props> = ({ time, icon, iconAlt, isActive, setActive }
       `
       );
     }, 1000);
-
-    console.log('TimesCard rendered');
 
     return () => clearInterval(countDown);
   }, [timeRemaining, activeTime, rawDate]);

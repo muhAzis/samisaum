@@ -20,6 +20,11 @@
     background-color: transparent;
     border: none;
     outline: none;
+
+    &::placeholder {
+      color: var(--clr-text-light);
+      opacity: 0.5;
+    }
   }
 
   .city-list {
@@ -33,6 +38,12 @@
     box-shadow: var(--box-shadow);
     border-radius: 20px;
     overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .cancle-btn {
       position: sticky;

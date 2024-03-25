@@ -13,7 +13,10 @@ export const DateDataContext = createContext({
     Maghrib: '',
     Isha: '',
   },
-  hijri: '',
+  hijri: {
+    date: '',
+    month: '',
+  },
 });
 
 interface Props {
@@ -30,6 +33,11 @@ type Timings = {
   Isha: string;
 };
 
+type Hijri = {
+  date: string;
+  month: string;
+};
+
 const DateDataContextProvider: React.FC<Props> = ({ children }) => {
   const { activeCity } = useCity();
   const { rawDate } = useDate();
@@ -42,7 +50,10 @@ const DateDataContextProvider: React.FC<Props> = ({ children }) => {
     Maghrib: '',
     Isha: '',
   });
-  const [hijri, setHijri] = useState<string>('');
+  const [hijri, setHijri] = useState<Hijri>({
+    date: '',
+    month: '',
+  });
 
   useEffect(() => {
     (async () => {
@@ -66,12 +77,46 @@ const DateDataContextProvider: React.FC<Props> = ({ children }) => {
           Isha: today.timings.Isha.replace(' (', ':00 ').replace(')', ''),
         });
 
-        setHijri(`${today.date.hijri.day} ${today.date.hijri.month.en} ${today.date.hijri.year}`);
+        setHijri({
+          date: `${today.date.hijri.day} ${hijriConversion(today.date.hijri.month.number)} ${today.date.hijri.year}`,
+          month: hijriConversion(today.date.hijri.month.number),
+        });
       } catch (error) {
         console.error(error);
       }
     })();
   }, [activeCity, rawDate]);
+
+  const hijriConversion = (month: number): string => {
+    switch (month) {
+      case 1:
+        return 'Muharram';
+      case 2:
+        return 'Safar';
+      case 3:
+        return 'Rabiul Awal';
+      case 4:
+        return 'Rabiul Akhir';
+      case 5:
+        return 'Jumadil Awal';
+      case 6:
+        return 'Jumadil Akhir';
+      case 7:
+        return 'Rajab';
+      case 8:
+        return "Sya'ban";
+      case 9:
+        return 'Ramadhan';
+      case 10:
+        return 'Syawal';
+      case 11:
+        return 'Dzulqaidah';
+      case 12:
+        return 'Dzulhijjah';
+      default:
+        return 'Muharram';
+    }
+  };
 
   return <DateDataContext.Provider value={{ timings, hijri }}>{children}</DateDataContext.Provider>;
 };

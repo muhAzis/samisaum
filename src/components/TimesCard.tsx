@@ -69,9 +69,15 @@ const TimesCard: React.FC<Props> = ({ time, icon, iconAlt, isActive, setActive }
   }, [timeRemaining, activeTime, rawDate]);
 
   return (
-    <main id="mainCard" className={isActive ? '' : 'nonactive'}>
+    <main id="mainCard" className={`${isActive ? '' : 'nonactive'} ${hijri.month === 'Ramadhan' && (time === 'Imsak' || time === 'Maghrib') ? 'ramadhan' : ''}`}>
       <div className="card-container" onClick={() => (isActive ? '' : setActive())}>
-        {isActive && (!hijri ? <span className="hijriyah-date-loading" /> : <span className="hijriyah-date">{hijri}</span>)}
+        {isActive && hijri.month === 'Ramadhan' && (time === 'Imsak' || time === 'Maghrib') && (
+          <>
+            <img className="ramadhan-lantern1" src="/lantern1.png" alt="lantern1" />
+            <img className="ramadhan-lantern2" src="/lantern2.png" alt="lantern2" />
+          </>
+        )}
+        {isActive && (!hijri ? <span className="hijriyah-date-loading" /> : <span className="hijriyah-date">{hijri.date}</span>)}
         <h2 className="time">{time}</h2>
         <img className="time-icon" src={icon} alt={iconAlt} />
         {!activeTime ? <h3 className="time-clock-loading" /> : <h3 className="time-clock">{activeTime}</h3>}

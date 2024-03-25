@@ -10,6 +10,30 @@
   }
 }
 
+@keyframes colorBlip {
+  0% {
+    background-color: var(--clr-background-gold);
+  }
+  50% {
+    background-color: var(--clr-background-gold2);
+  }
+  100% {
+    background-color: var(--clr-background-gold);
+  }
+}
+
+@keyframes tilting {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 #mainCard {
   width: 100%;
   margin-top: 20px;
@@ -26,9 +50,28 @@
     background-color: var(--clr-background-trans);
     border-radius: 20px;
     box-shadow: var(--box-shadow);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     align-items: center;
     overflow: hidden;
+
+    .ramadhan-lantern1,
+    .ramadhan-lantern2 {
+      position: absolute;
+    }
+
+    .ramadhan-lantern1 {
+      width: 30px;
+      top: 0;
+      right: 10%;
+      animation: tilting 5s infinite ease-in-out;
+    }
+
+    .ramadhan-lantern2 {
+      width: 25px;
+      top: 0;
+      right: 17%;
+      animation: tilting 8s infinite ease-in-out;
+    }
 
     .hijriyah-date-loading {
       width: 150px;
@@ -157,7 +200,7 @@
     background-color: var(--clr-background-trans);
     border-radius: 20px;
     box-shadow: var(--box-shadow);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     align-items: center;
     justify-content: space-between;
     transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
@@ -190,6 +233,12 @@
       box-shadow: var(--box-shadow2);
       transform: translateY(-6px);
     }
+  }
+}
+
+#mainCard.ramadhan {
+  .card-container {
+    animation: colorBlip 5s infinite ease-in-out;
   }
 }
 

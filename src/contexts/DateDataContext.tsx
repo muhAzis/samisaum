@@ -51,7 +51,7 @@ const DateDataContextProvider: React.FC<Props> = ({ children }) => {
         const month = dayjs(rawDate).month() + 1;
         const date = dayjs(rawDate).date();
 
-        const response = await fetch(`http://api.aladhan.com/v1/calendarByCity/${year}/${month}?city=${activeCity.toLocaleLowerCase()}&country=indonesia&method=11&tune=3,3,-3,4,2,3,3,2,3,0`);
+        const response = await fetch(`https://api.aladhan.com/v1/calendarByCity/${year}/${month}?city=${activeCity.toLocaleLowerCase()}&country=indonesia&method=11&tune=3,3,-3,4,2,3,3,2,3,0`);
         const rawData = await response.json();
 
         const today = rawData.data.filter((item: any) => item.date.gregorian.day === date.toString())[0];

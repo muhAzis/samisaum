@@ -36,7 +36,6 @@
 
 #mainCard {
   width: 100%;
-  margin-top: 20px;
 
   .card-container {
     position: relative;
@@ -55,22 +54,41 @@
     overflow: hidden;
 
     .ramadhan-lantern1,
-    .ramadhan-lantern2 {
+    .ramadhan-lantern2,
+    .ramadhan-lantern3,
+    .ramadhan-lantern4 {
       position: absolute;
+      top: 0;
+      filter: drop-shadow(var(--box-shadow));
+    }
+
+    .ramadhan-lantern1,
+    .ramadhan-lantern3 {
+      width: 25px;
+      right: 10%;
+    }
+
+    .ramadhan-lantern2,
+    .ramadhan-lantern4 {
+      width: 20px;
+      right: 17%;
     }
 
     .ramadhan-lantern1 {
-      width: 30px;
-      top: 0;
       right: 10%;
       animation: tilting 5s infinite ease-in-out;
     }
-
     .ramadhan-lantern2 {
-      width: 25px;
-      top: 0;
       right: 17%;
       animation: tilting 8s infinite ease-in-out;
+    }
+    .ramadhan-lantern3 {
+      left: 10%;
+      animation: tilting 6s infinite ease-in-out;
+    }
+    .ramadhan-lantern4 {
+      left: 17%;
+      animation: tilting 9s infinite ease-in-out;
     }
 
     .hijriyah-date-loading {
@@ -186,7 +204,6 @@
 
 #mainCard.nonactive {
   width: 100%;
-  margin-top: 20px;
 
   .card-container {
     position: relative;

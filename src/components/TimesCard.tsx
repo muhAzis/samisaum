@@ -75,6 +75,8 @@ const TimesCard: React.FC<Props> = ({ time, icon, iconAlt, isActive, setActive }
           <>
             <img className="ramadhan-lantern1" src="/lantern1.png" alt="lantern1" />
             <img className="ramadhan-lantern2" src="/lantern2.png" alt="lantern2" />
+            <img className="ramadhan-lantern3" src="/lantern1.png" alt="lantern3" />
+            <img className="ramadhan-lantern4" src="/lantern2.png" alt="lantern4" />
           </>
         )}
         {isActive && (!hijri ? <span className="hijriyah-date-loading" /> : <span className="hijriyah-date">{hijri.date}</span>)}

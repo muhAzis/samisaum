@@ -1,0 +1,112 @@
+#devnote {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 20px 50px;
+  gap: 20px;
+  color: var(--clr-text-light);
+  background-color: var(--clr-background-trans-dark);
+  border-radius: 20px;
+  backdrop-filter: blur(3px);
+
+  .tech-stack {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .tech {
+      height: 40px;
+    }
+  }
+
+  .tech-desc {
+    .bold {
+      font-weight: 700;
+    }
+
+    .bi {
+      color: var(--clr-gold);
+    }
+  }
+
+  .github-repo {
+    width: fit-content;
+    padding: 10px 15px;
+    font-weight: 700;
+    background-color: var(--clr-background-trans);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--clr-background-trans2);
+    }
+  }
+
+  .developer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    .dev-logo {
+      position: relative;
+      display: grid;
+      width: 120px;
+      height: 120px;
+      padding: 20px;
+      background-color: var(--clr-background-trans);
+      border-radius: 50%;
+      backdrop-filter: blur(3px);
+      place-content: center;
+      overflow: hidden;
+
+      #devLogo {
+        width: 100%;
+        fill: var(--clr-text-light);
+        transform: translateY(-5px);
+      }
+
+      .profile-pic {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      &:hover {
+        .profile-pic {
+          opacity: 1;
+        }
+      }
+    }
+    .dev-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .dev-role {
+        margin-bottom: 20px;
+      }
+
+      .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .contact {
+          display: flex;
+          padding: 5px 15px;
+          gap: 10px;
+          align-items: center;
+          background-color: var(--clr-background-trans);
+          border-radius: 10px;
+          transition: background-color 0.2s ease-in-out;
+
+          &:hover {
+            background-color: var(--clr-background-trans2);
+          }
+        }
+      }
+    }
+  }
+}

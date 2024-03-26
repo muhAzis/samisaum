@@ -9,6 +9,10 @@ const Header: React.FC = () => {
 
   return (
     <>
+      <div className="logo">
+        <img id="appLogo" src="/logo.svg" alt="logo" />
+        <img id="appLogoText" src="/logo-text.svg" alt="logo-text" />
+      </div>
       <span className="salam">Assalamu&apos;alaikum!</span>
       <div className="location">
         <span className="city">{activeCity}</span>

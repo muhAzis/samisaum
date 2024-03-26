@@ -1,23 +1,41 @@
+.logo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  align-self: flex-end;
+
+  #appLogo {
+    height: 25px;
+    filter: drop-shadow(var(--text-shadow));
+  }
+
+  #appLogoText {
+    height: 20px;
+    filter: drop-shadow(var(--text-shadow));
+  }
+}
+
 .salam {
+  margin-block: 5px;
   color: var(--clr-text-special);
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
   text-shadow: var(--text-shadow);
+  align-self: flex-start;
 }
 
 .location {
   display: flex;
   width: 100%;
   gap: 5px;
-  margin-top: 10px;
   color: var(--clr-text-light);
   text-shadow: var(--text-shadow);
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   .city {
-    max-width: 80%;
-    font-size: 2rem;
+    max-width: 100%;
+    font-size: 2.5rem;
     font-weight: 700;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -27,10 +45,10 @@
 
 .dates {
   position: relative;
-  margin-top: 5px;
-  color: var(--clr-text-special);
+  color: var(--clr-text-light);
   font-size: 1rem;
   text-shadow: var(--text-shadow);
+  align-self: flex-start;
 
   .date-btn {
     cursor: pointer;

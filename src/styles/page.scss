@@ -3,7 +3,7 @@
   display: flex;
   width: 100vw;
   height: 100dvh;
-  padding: 40px 0px;
+  padding: 20px 0px 40px;
   background: var(--clr-radial-gradient);
   justify-content: center;
   overflow-y: scroll;
@@ -22,5 +22,13 @@
     padding: 0px 40px;
     align-items: center;
     z-index: 1;
+
+    .times-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px 0;
+      gap: 15px;
+    }
   }
 }

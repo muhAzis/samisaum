@@ -21,7 +21,6 @@ export const metadata: Metadata = {
       url: 'https://muhabdulazis.vercel.app/',
     },
   ],
-  viewport: 'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
   icons: [{ rel: 'icon', url: '/logo-clr.svg' }],
 };
 

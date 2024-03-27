@@ -31,17 +31,21 @@ const Devnote: React.FC = () => {
           <p className="dev-role">Fullstack Developer</p>
 
           <div className="contacts">
-            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHwfXVNRZKqCKlcRZqxbcnRsWQwFPCDqslrqbqZLftpklqKqJDFKchfHkVblhkcNdssxzTj" target="_blank" className="bi bi-google contact">
-              muhabdulazis555@gmail.com
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHwfXVNRZKqCKlcRZqxbcnRsWQwFPCDqslrqbqZLftpklqKqJDFKchfHkVblhkcNdssxzTj" target="_blank" className="contact">
+              <span className="bi bi-google icon" />
+              <span className="text">muhabdulazis555@gmail.com</span>
             </a>
-            <a href="https://wa.me/6288226389456" target="_blank" className="bi bi-whatsapp contact">
-              +6288226389456
+            <a href="https://wa.me/6288226389456" target="_blank" className="contact">
+              <span className="bi bi-whatsapp icon" />
+              <span className="text">+6288226389456</span>
             </a>
-            <a href="https://muhabdulazis.vercel.app/" target="_blank" className="bi bi-globe2 contact">
-              Muhamad Abdul Azis
+            <a href="https://muhabdulazis.vercel.app/" target="_blank" className="contact">
+              <span className="bi bi-globe2 icon" />
+              <span className="text">Muhamad Abdul Azis</span>
             </a>
-            <a href="https://github.com/muhAzis/" target="_blank" className="bi bi-github contact">
-              muhAzis
+            <a href="https://github.com/muhAzis/" target="_blank" className="contact">
+              <span className="bi bi-github icon" />
+              <span className="text">muhAzis</span>
             </a>
           </div>
         </div>

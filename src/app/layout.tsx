@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     },
   ],
   icons: [{ rel: 'icon', url: '/logo-clr.svg' }],
+  openGraph: {
+    title: 'Samisaum | Cek jadwal Imsakiyah dengan mudah',
+    description: 'Aplikasi jadwal waktu sholat harian yang lengkap dan mudah untuk digunakan.',
+    url: 'https://samisaum.vercel.app',
+    siteName: 'Samisaum',
+    images: [{ url: 'https://samisaum.vercel.app/card.png' }],
+  },
 };
 
 export default function RootLayout({

@@ -1,5 +1,6 @@
 import React from 'react';
 import '@/styles/About.scss';
+import Image from 'next/image';
 
 const About: React.FC = () => {
   return (
@@ -17,9 +18,10 @@ const About: React.FC = () => {
         aplikasi ini berbasis web jadi tidak akan memakan banyak ruang memori ponsel kamu!
       </p>
       <p className="install">Cara Install</p>
+      <Image src="/pwa-install.jpg" alt="pwa-install" className="pwa-install" width={100} height={100} quality={100} />
       <p className="about-desc">
-        Kamu hanya perlu buka laman website ini pada browser <span className="bold">Chrome</span>, lalu saat muncul pop-up bertuliskan <span className="bold">install</span> tap pop-up tersebut dan aplikasi ini akan langsung terpasang pada
-        halaman depan ponsel kamu, mudah bukan!?
+        Kamu hanya perlu buka laman website ini pada browser <span className="bold">Chrome</span>, lalu saat muncul pop-up bertuliskan <span className="bold">install</span> seperti gambar diatas lalu tap{' '}
+        <span className="bold">install</span> dan aplikasi ini akan langsung terpasang pada halaman depan ponsel kamu, mudah bukan!?
       </p>
     </main>
   );

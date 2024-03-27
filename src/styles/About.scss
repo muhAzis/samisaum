@@ -27,4 +27,11 @@
     font-size: 1.5rem;
     font-weight: 700;
   }
+
+  .pwa-install {
+    width: 70%;
+    height: fit-content;
+    box-shadow: var(--box-shadow);
+    align-self: center;
+  }
 }

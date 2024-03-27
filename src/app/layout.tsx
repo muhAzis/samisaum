@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'Aplikasi jadwal waktu sholat harian yang lengkap dan mudah untuk digunakan.',
     url: 'https://samisaum.vercel.app',
     siteName: 'Samisaum',
-    images: [{ url: 'https://samisaum.vercel.app/card.png' }],
+    // images: [{ url: 'https://samisaum.vercel.app/card.png' }],
   },
 };
 

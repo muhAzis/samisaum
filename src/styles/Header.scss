@@ -60,3 +60,17 @@
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 476px) {
+  .logo {
+    #appLogoText {
+      display: none;
+    }
+  }
+
+  .location {
+    .city {
+      font-size: 2rem;
+    }
+  }
+}

@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     },
   ],
   icons: [{ rel: 'icon', url: '/logo-clr.svg' }],
-  openGraph: {
-    title: 'Samisaum | Cek jadwal Imsakiyah dengan mudah',
-    description: 'Aplikasi jadwal waktu sholat harian yang lengkap dan mudah untuk digunakan.',
-    url: 'https://samisaum.vercel.app',
-    siteName: 'Samisaum',
-    // images: [{ url: 'https://samisaum.vercel.app/card.png' }],
-  },
+  // openGraph: {
+  //   title: 'Samisaum | Cek jadwal Imsakiyah dengan mudah',
+  //   description: 'Aplikasi jadwal waktu sholat harian yang lengkap dan mudah untuk digunakan.',
+  //   url: 'https://samisaum.vercel.app',
+  //   siteName: 'Samisaum',
+  //   // images: [{ url: 'https://samisaum.vercel.app/card.png' }],
+  // },
 };
 
 export default function RootLayout({
@@ -51,11 +51,6 @@ export default function RootLayout({
         <meta name="description" content="Samisaum, aplikasi jadwal waktu sholat harian yang lengkap dan mudah untuk digunakan." />
         <meta name="keywords" content="samisaum, jadwal buka, jadwal imsak, jadwal sholat" />
         <meta name="referrer" content="origin" />
-        {/* <meta property="og:url" content="https://samisaum.vercel.app" />
-        <meta property="og:title" content="Samisaum | Jadwal Sholat Harian" />
-        <meta property="og:description" content="Samisaum, aplikasi jadwal waktu sholat  harian yang lengkap dan mudah untuk digunakan." />
-        <meta property="og:image" content="https://samisaum.vercel.app/card.png" />
-        <meta property="og:site_name" content="Samisaum" /> */}
       </head>
       <body className={inter.className}>
         {children}

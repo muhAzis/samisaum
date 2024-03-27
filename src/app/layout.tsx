@@ -43,14 +43,14 @@ export default function RootLayout({
         <title>Samisaum | Cek jadwal Imsakiyah dengan mudah</title>
         <link rel="icon" href="/logo-clr.svg" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></link>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="application-name" content="Samisaum | Jadwal Sholat Harian" />
         <meta name="author" content="Muhamad Abdul Azis (Necode)" />
         <meta name="creator" content="Muhamad Abdul Azis (Necode)" />
         <meta name="publisher" content="Muhamad Abdul Azis (Necode)" />
         <meta name="description" content="Samisaum, aplikasi jadwal waktu sholat harian yang lengkap dan mudah untuk digunakan." />
         <meta name="keywords" content="samisaum, jadwal buka, jadwal imsak, jadwal sholat" />
-        <meta name="referrer" content="origin" />
+        <meta name="referrer" content="origin" /> */}
       </head>
       <body className={inter.className}>
         {children}

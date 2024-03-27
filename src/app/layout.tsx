@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     },
   ],
   icons: [{ rel: 'icon', url: '/logo-clr.svg' }],
-  // metadataBase: new URL('https://samisaum.vercel.app/'),
+  metadataBase: new URL('https://samisaum.vercel.app'),
   // openGraph: {
   //   title: 'Samisaum | Cek jadwal Imsakiyah dengan mudah',
   //   description: 'Aplikasi jadwal waktu sholat harian yang lengkap dan mudah untuk digunakan.',

@@ -11,7 +11,7 @@ const inter = Poppins({
 export const metadata: Metadata = {
   title: 'Samisaum | Cek jadwal Imsakiyah dengan mudah',
   description: 'Aplikasi jadwal waktu sholat harian yang lengkap dan mudah untuk digunakan.',
-  metadataBase: new URL('https://samisaum.vercel.app/'),
+  // metadataBase: new URL('https://samisaum.vercel.app/'),
   generator: 'Next.js',
   manifest: '/manifest.json',
   keywords: ['samisaum', 'jadwal sholat', 'jadwal imsakiyah', 'jadwal imsak', 'jadwal buka puasa', 'jadwal buka'],

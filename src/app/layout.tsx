@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import '@/styles/globals.scss';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Poppins({
   subsets: ['latin'],
@@ -76,6 +77,8 @@ export default function RootLayout({
             </div>
           </div>
         </div>
+
+        <Analytics />
       </body>
     </html>
   );
